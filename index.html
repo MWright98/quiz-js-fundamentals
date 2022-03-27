@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>JS Fundamentals Quiz</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>JavaScript Fundamentals Quiz</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
 
-<script src="./assets/js/script.js"></script>
+    <body>
+
+        <!--Header with link to high scores and timer-->
+        <header>
+            <a href="#" id="high-scores-link" onclick="viewHighScores()">View High Scores</a>
+            <h2 id="timer">Time: 75</h2>
+        </header>
+        
+        <div id=main-wrapper>
+    
+            <main>
+                <!--Introduction-->
+                <section id="intro-card">
+                    <h3>Coding Quiz Challenge</h3>
+                    <p>Try to answer the following code-related questions within the time limit
+                        Keep in mind that incorrect answers will penalize youre score/time by 
+                        ten seconds!
+                    </p>
+                    <button id="start-btn" onclick="startQuiz()">Start the quiz</button>
+                </section>
+    
+                <!--main quiz template-->
+                <section id="quiz-card">
+                    <div id="questions"></div>
+                        <button id="a" onclick="checkAnswer('a')">A</button>
+                        <button id="b" onclick="checkAnswer('b')">B</button>
+                        <button id="c" onclick="checkAnswer('c')">C</button>
+                        <button id="d" onclick="checkAnswer('d')">D</button>
+                    <div id="choice-result">
+                        <hr/>
+                        <p id="right">Correct!</p>
+                        <p id="wrong">Wrong!</p>
+                    </div>
+                </section>
+    
+                <!--User score submission-->
+                <section id="user-score-card">
+                    <div id=user-score></div>
+                    <form>
+                        <label for="initials">Enter initials</label>
+                        <input type="text" id="initials" name="initials" placeholder="">
+                        <button type="button" id="submit-initials">  Submit </button>
+                    </form>
+                </section>
+    
+                <!--Saved High Score display-->
+                <section id="high-scores-card">
+                    <div id="past-scores">
+                        <h3>High Scores</h3>
+                        <div id="high-scores-header">
+                            <h4>Player Initials</h4>
+                            <h4>Score</h4>
+                        </div>
+                        <div id="player-initials"></div>
+                        <div id="player-score"></div>
+                    </div>
+                    <div id="game-btns">
+                        <button id="play-game" onclick="replayQuiz()">Start Quiz</button>
+                        <button id="clear-scores" onclick="clearScores()">Clear Scores</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!--Javascript link-->
+        <script src="./assets/js/script.js"></script>
+
+    </body>
 </html>

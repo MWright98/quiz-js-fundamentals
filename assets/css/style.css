@@ -1,0 +1,167 @@
+/*** Universal Reset ***/
+* {
+    box-sizing: border-box;
+}
+
+/*** Body Styling ***/
+body {
+    font-family: sans-serif;
+}
+
+/*** Header ***/
+#high-scores-link, #timer {
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5%;
+    font-size: large;
+    margin-top: -.5rem;
+}
+
+#high-scores-link {
+    float: left;
+    text-align: left;
+    align-content: left;
+    text-decoration: none;
+}
+
+#timer {
+    float: right;
+    align-content: right;
+}
+
+/*** Main Sections of the Website ***/
+#main-wrapper {
+    height: 100vh;
+    width: 100vw;
+    max-width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+}
+
+section {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10%;
+}
+
+h3 {
+    color: black;
+    text-shadow: .5px .5px white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+p, #questions.question {
+    color: black;
+    text-shadow: .5px .5px white;
+    text-align: center;
+    font-size: x-large;
+}
+
+input {
+    text-align: center;
+    font-size: large;
+}
+
+button {
+display: block;
+background-color: #4d0081;
+border-radius: 10px;
+border: 3px double #cccccc;
+color: #eeeeee;
+text-align: center;
+font-size: 15px;
+padding: 20px;
+width: 200px;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+
+button:hover {
+    background-color: #ba14d8;
+}
+
+#intro-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quiz-card {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#quiz-card button {
+    width: 500px;
+}
+
+#choice-result {
+    display: none;
+}
+
+#user-score-card {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#past-scores {
+    display: none;
+    width: 50%;
+    border-bottom-style: groove;
+    margin-bottom: 25px;
+}
+
+#high-scores-header {
+    display:flex;
+    justify-content: space-around;
+    border-bottom-style: outset;
+    margin-bottom: .5rem;
+}
+
+#high-scores-card {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#initials {
+    margin: .5rem;
+    height: 1.75rem;
+}
+
+#player-initials {
+    display: inline-block;
+    padding-left: 5.7rem;
+    font-weight: bold;
+}
+
+#player-score {
+    float: right;
+    padding-right: 4.5rem;
+    font-weight: bold;
+}
+
+li {
+    padding-bottom: 3px;
+    list-style-type: none;
+}
+
+#user-score {
+    padding-bottom: 0.5rem;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#game-btns {
+    display: none;
+}
